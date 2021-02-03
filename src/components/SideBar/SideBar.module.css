@@ -1,0 +1,32 @@
+.sideBar {
+    position: fixed;
+    top: 30%;
+    left: 95%;
+    z-index: 100;
+}
+
+.item {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2B2A2A;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    cursor: pointer;
+
+}
+
+.item:hover {
+
+}
+
+.activeItem {
+    background-color: #FFB400;
+}
+
+.item img {
+    width: 30px;
+}

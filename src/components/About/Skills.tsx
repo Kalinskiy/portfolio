@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './About.module.css'
+import style from './Skills.module.css'
 
-const About = () => {
+const Skills = () => {
     type skillType = {
         name: string,
         width: string
@@ -65,4 +65,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Skills;
