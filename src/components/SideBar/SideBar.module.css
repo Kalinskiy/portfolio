@@ -7,8 +7,8 @@
 
 .item {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #2B2A2A;
     padding: 10px;
@@ -16,17 +16,68 @@
     justify-content: center;
     margin: 20px 0;
     cursor: pointer;
+    position: relative;
+    text-decoration: none;
+
+
 
 }
+
+.buttonTitle {
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+
+
+
+}
+
+.item:hover .buttonTitle {
+    width: 50px;
+    opacity: 1;
+    right: 25px;
+    background-color: #ffb400;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 7px 30px 7px 30px;
+    z-index: -1;
+    transition: all .3s;
+
+}
+
+/*.buttonTitle {*/
+/*    z-index: -1;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    opacity: 0;*/
+/*    color: #fff;*/
+/*    line-height: 50px;*/
+/*    font-weight: 500;*/
+/*    transition: all .3s;*/
+/*    border-radius: 30px;*/
+/*    text-transform: uppercase;*/
+/*    padding: 13px 50px 0px 30px;*/
+/*    height: 50px;*/
+/*    background-color: #FFB400;*/
+/*}*/
 
 .item:hover {
-
+    background-color: #FFB400;
 }
+
+/*.item:hover .buttonTitle {*/
+/*    opacity: 1;*/
+/*    right: 0;*/
+/*    transform: translate(-5%, -32%);*/
+/*    text-decoration: none;*/
+/*    color: #ffff;*/
+/*    display: block;*/
+/*}*/
 
 .activeItem {
     background-color: #FFB400;
 }
 
 .item img {
-    width: 30px;
+    width: 20px;
 }

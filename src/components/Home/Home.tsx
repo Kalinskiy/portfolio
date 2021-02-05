@@ -4,7 +4,8 @@ import style from './Home.module.css'
 const Home = () => {
     return (
         <div className={style.home}>
-            <div className={style.colorBlock}/>{/*yellow block*/}
+            <div className={style.colorBlock}/>
+            {/*yellow block*/}
 
             <div className={style.columns}>
                 <div className={style.col1}>
@@ -21,8 +22,13 @@ const Home = () => {
                             qualitative code.
                             I am passionate about building excellent software.
                         </div>
-                        <div >
-                            <button className={style.downloadButton}>download cv</button>
+                        <div>
+                            <a className={style.downloadLink} href='../../../public/1.txt' download>
+                            <button className={style.downloadButton}>
+                                    download cv
+                            </button>
+                            </a>
+
                         </div>
                     </div>
                 </div>
