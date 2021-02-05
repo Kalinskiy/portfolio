@@ -1,5 +1,5 @@
 import React from "react";
-import {HashRouter, Redirect, Route, } from "react-router-dom";
+import {HashRouter, Redirect, Route, useLocation,} from "react-router-dom";
 import Home from "../Home/Home";
 import Contacts from "../Contacts/Contacts";
 import style from './App.module.css'
@@ -9,13 +9,18 @@ import Project from "../Projects/Project";
 import "react-tiger-transition/styles/main.min.css";
 //@ts-ignore
 import {Navigation} from 'react-tiger-transition';
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 
 const App = () => {
+    const location = useLocation()
+    console.log(location)
 
     return (
-        <div className={style.app}>
-            <HashRouter>
+        <TransitionGroup className="RTG">
+            <CSSTransition key={location.pathname} timeout={600} classNames="fade">
+                <div className={style.app}>
+
                     <SideBar/>
                     <Route path='/home' render={() => <Home/>}/>
 
@@ -25,9 +30,11 @@ const App = () => {
                         <Route path='/projects' render={() => <Project/>}/>
                         <Route path='/contacts' render={() => <Contacts/>}/>
                     </div>
-            </HashRouter>
-        </div>
 
+
+                </div>
+            </CSSTransition>
+        </TransitionGroup>
 
     )
         ;
