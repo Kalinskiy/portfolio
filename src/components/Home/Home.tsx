@@ -1,5 +1,7 @@
 import React from 'react';
-import style from './Home.module.css'
+import style from './Home.module.scss'
+import mainPhoto from '../../assets/photo.jpg'
+import Button from "../../common/components/Button/Button";
 
 
 const Home = () => {
@@ -7,12 +9,10 @@ const Home = () => {
 
     return (
         <div className={style.home}>
-            <div className={style.colorBlock}/>
-            {/*yellow block*/}
 
             <div className={style.columns}>
                 <div className={style.col1}>
-                    <div className={style.photo}/>
+                    <img className={style.photo} src={mainPhoto} alt=""/>
                 </div>
                 <div className={style.col2}>
                     <div className={style.greetingBlock}>
@@ -20,16 +20,14 @@ const Home = () => {
                         <div className={style.me}>
                             I`M <span className={style.colored}>ALEKSANDR KALINSKIY</span>
                         </div>
-                        <div className={style.description}>I am Ukrainian front-end and React developer focused on clean
-                            and
-                            qualitative code.
+                        <div className={style.description}>
+                            I am Ukrainian front-end and React developer
+                            focused on clean and qualitative code.
                             I am passionate about building excellent software.
                         </div>
-                        <div>
+                        <div className={style.download}>
                             <a className={style.downloadLink} href='../../../public/1.txt' download>
-                            <button className={style.downloadButton}>
-                                    download cv
-                            </button>
+                                <Button title={'download cv'}/>
                             </a>
 
                         </div>

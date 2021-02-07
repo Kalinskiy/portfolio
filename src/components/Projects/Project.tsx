@@ -1,11 +1,12 @@
 import React from 'react';
-import style from './Project.module.css'
+import style from './Project.module.scss'
 import social from '../../assets/social.png'
 import todo from '../../assets/todo.png'
 import cards from '../../assets/cards.jpg'
 import cinema from '../../assets/cinema.jpg'
 import pizza from '../../assets/pizza.png'
 import books from '../../assets/books.jpg'
+import Title from "../../common/components/Title/Title";
 
 
 
@@ -34,13 +35,12 @@ const Project = () => {
     //
     // }
     return (
-        <div className={style.container}>
-            <h2 className={style.title}>My <span>projects</span></h2>
+        <div>
+
+            <Title title={'projects'}/>
             <div className={style.projects}>
 
                 {projectItem.map((item) => {
-                    let url = 'localhost'=='localhost'? 'foo':'';
-
                     return <a target='_blank' href={`${item.link}`}>
                         <div className={style.projectItem} style={{backgroundImage: 'url(' + item.image + ')'}}>
                             <span className={style.projectTitle}>{item.title}</span>

@@ -1,0 +1,11 @@
+$base-color: #FFB400;
+$secondary-color: #2B2A2A;
+$background-color: #111;
+$text-color: #fff;
+$placeholder-text-color: #DDDDDD;
+
+@mixin mediaTitle {
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
+}

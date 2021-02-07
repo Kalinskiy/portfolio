@@ -1,0 +1,63 @@
+@import "../../common/styles/common.module";
+
+.sideBar {
+  position: fixed;
+  top: 30%;
+  left: 95%;
+  z-index: 100;
+
+  .item {
+    display: flex;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $base-color;
+    }
+
+    &:hover .buttonTitle {
+      width: 50px;
+      opacity: 1;
+      right: 23px;
+      background-color: $base-color;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+
+      padding: 6px 70px 7px 30px;
+      z-index: -1;
+      transition: all .3s;
+      overflow: hidden;
+      box-shadow: 0 0 7px $base-color;
+
+    }
+
+    img {
+      width: 20px;
+    }
+
+
+    .buttonTitle {
+      position: absolute;
+      opacity: 0;
+      color: $text-color;
+
+    }
+  }
+
+  .activeItem {
+    border: 1px solid $base-color;
+    box-shadow: 0 0 7px $base-color;
+
+  }
+}
+
+

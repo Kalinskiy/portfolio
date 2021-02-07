@@ -1,0 +1,151 @@
+@import '../../common/styles/common.module';
+
+.home {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+
+
+  &::after {
+    content: '';
+    position: fixed;
+    height: 200%;
+    background-color: $base-color;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
+    overflow: visible;
+    @media screen and (max-width: 992px) {
+      left: -90%;
+
+    }
+    @media screen and (max-width: 768px) {
+      left: -95%;
+    }
+    @media screen and (max-width: 525px) {
+      display: none;
+    }
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    @media screen and (max-width: 1200px) {
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .col1 {
+      padding: 30px;
+      z-index: 10;
+
+      .photo {
+        //height: calc(100vh - 100px);
+        height: 850px;
+        width: 600px;
+        z-index: 111;
+        border-radius: 15px;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 9);
+        @media screen and (max-width: 1200px) {
+          height: 700px;
+          width: 450px;
+        }
+        @media screen and (max-width: 992px) {
+          border: 3px solid $base-color;
+          box-shadow: 0 0 7px $base-color;
+          height: 300px;
+          width: 300px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+    }
+
+    .col2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      flex-wrap: wrap;
+
+      .greetingBlock {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 300px;
+
+        @media screen and (max-width: 1200px) {
+          margin-right: 150px;
+          width: 400px;
+        }
+        @media screen and (max-width: 992px) {
+          margin-right: 0;
+          align-items: center;
+          justify-content: center;
+        }
+        @media screen and (max-width: 525px) {
+          width: 300px;
+        }
+
+
+        .hi {
+          font-size: 2.6em;
+          justify-content: center;
+        }
+
+        .me {
+          font-size: 42px;
+          font-weight: bold;
+          @media screen and (max-width: 1200px) {
+
+            font-size: 26px;
+          }
+          @media screen and (max-width: 992px) {
+            text-align: center;
+            font-size: 28px;
+          }
+          @media screen and (max-width: 525px) {
+            font-size: 20px;
+          }
+        }
+
+        .colored {
+          color: $base-color;
+          line-height: 2em;
+        }
+
+        .description {
+          font-size: 20px;
+          @media screen and (max-width: 1200px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 992px) {
+            text-align: center;
+          }
+          @media screen and (max-width: 525px) {
+            font-size: 16px;
+          }
+        }
+
+        .download {
+          .downloadLink {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
