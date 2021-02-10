@@ -1,0 +1,214 @@
+@import '../../common/styles/common.module';
+
+$white: #ffffff;
+$menubg: #84878E;
+$ovarlay: #000000;
+
+body {
+  &.active {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+
+
+  &:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba($ovarlay, .40);
+    -webkit-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+    -moz-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+  }
+}
+
+//body, html {
+//  -ms-text-size-adjust: 100%;
+//  -webkit-text-size-adjust: 100%;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//  font-size: 10px;
+//  font-family: 'Poppins', sans-serif;
+//}
+
+
+//* {
+//  margin: 0;
+//  padding: 0;
+//  border: none;
+//  box-sizing: border-box;
+//  -webkit-tap-highlight-color: transparent;
+//  text-decoration: none;
+//  outline: none;
+//  list-style: none;
+//}
+
+@mixin all-transition {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.notFlex {
+  display: none;
+}
+
+.hamburgerMenu {
+  opacity: 0;
+
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 100%;
+  border: 1px solid $base-color;
+  box-shadow: 0 0 7px $base-color;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9;
+  @media screen and (max-width: 992px) {
+    opacity: 1;
+  }
+
+  &.active {
+    @include all-transition;
+    opacity: .9;
+
+    span {
+      &:first-child {
+        top: 2rem;
+        position: absolute;
+        -moz-transform: rotate(-50deg);
+        -webkit-transform: rotate(-50deg);
+        -o-transform: rotate(-50deg);
+        -ms-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+      }
+
+      &:last-child {
+        top: 2rem;
+        position: absolute;
+        -moz-transform: rotate(230deg);
+        -webkit-transform: rotate(230deg);
+        -o-transform: rotate(230deg);
+        -ms-transform: rotate(230deg);
+        transform: rotate(230deg);
+        -webkit-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+        -moz-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+      }
+    }
+  }
+
+  span {
+    @include all-transition;
+    width: 2.5rem;
+    height: .2rem;
+    background: $base-color;
+    -webkit-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+    -moz-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+    margin: .4rem 0;
+
+  }
+}
+
+.menu {
+
+  width: 100%;
+  left: 0;
+  transform: matrix(1.00, 0.00, 0.00, 1.00, 0, -320);
+  -ms-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, -320);
+  -webkit-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, -320);
+  -webkit-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+  -moz-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+
+  ul {
+    flex: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    li {
+      transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+      -ms-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+      -webkit-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+      -webkit-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+      -moz-transition: all .3s cubic-bezier(.10, .10, .25, .90);
+
+      a {
+        font-size: 3rem;
+        line-height: 10rem;
+        color: $base-color;
+        padding: 0 4rem;
+        @include all-transition;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  &.active {
+    transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+    -ms-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+    -webkit-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+    background: $background-color;
+    height: 100vh;
+
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+
+      li {
+        animation: fadeIn .3s ease-in both;
+
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * .5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+    -ms-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+    -webkit-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 40);
+  }
+
+  to {
+    opacity: 1;
+    transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+    -ms-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+    -webkit-transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
+  }
+}

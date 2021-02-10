@@ -25,6 +25,7 @@ const Home = () => {
                             focused on clean and qualitative code.
                             I am passionate about building excellent software.
                         </div>
+
                         <div className={style.download}>
                             <a className={style.downloadLink} href='../../../public/1.txt' download>
                                 <Button title={'download cv'}/>
