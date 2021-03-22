@@ -8,9 +8,23 @@ import linkedin from '../../assets/icons/linkedin.png'
 import github from '../../assets/icons/github.png'
 import Title from "../../common/components/Title/Title";
 import Button from "../../common/components/Button/Button";
-import Input from "../../common/components/Input/Input";
+import {useFormik} from "formik";
 
 const Contacts = () => {
+
+    const formik = useFormik({
+        enableReinitialize: true,
+        initialValues: {
+            email: '',
+            name: '',
+            subject: '',
+            message: ''
+        },
+        onSubmit: values => {
+            console.log(values)
+        }
+    })
+
     return (
         <div className={style.container}>
             <Title title={'contacts'}/>
@@ -49,17 +63,19 @@ const Contacts = () => {
                     </div>
                 </div>
                 <div className={style.block2}>
-                    <div className={style.inputs}>
-                        <Input placeholder={'Your name'} type={'text'}/>
-                        <Input placeholder={'Your email'} type={'text'}/>
-                        <Input placeholder={'Subject'} type={'text'}/>
-
-                    </div>
-                    <div className={style.textArea}>
-                        <textarea className={style.textArea} placeholder={'Your message'}>
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className={style.inputs}>
+                            <input type={'text'} placeholder={'Name'}  {...formik.getFieldProps('name')}/>
+                            <input type={'text'} placeholder={'your email'}  {...formik.getFieldProps('email')}/>
+                            <input type={'text'} placeholder={'Subject'}  {...formik.getFieldProps('subject')}/>
+                        </div>
+                        <div className={style.textArea}>
+                        <textarea className={style.textArea}
+                                  placeholder={'Your message'} {...formik.getFieldProps('message')}>
                         </textarea>
-                        <Button title={'Send message'}/>
-                    </div>
+                            <Button title={'Send message'}/>
+                        </div>
+                    </form>
                 </div>
 
             </div>

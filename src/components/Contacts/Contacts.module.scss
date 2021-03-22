@@ -5,13 +5,14 @@
 
   .contacts {
     display: flex;
+    justify-content: center;
     justify-content: space-evenly;
     @media screen and (max-width: 1200px) {
       flex-direction: column;
     }
 
     .block1 {
-      width: 30%;
+      width: 40%;
       padding-right: 20px;
       @media screen and (max-width: 1200px) {
         display: flex;
@@ -100,14 +101,47 @@
 
     .block2 {
       display: flex;
+      justify-content: center;
       flex-direction: column;
       @media screen and (max-width: 1200px) {
         text-align: center;
       }
-
       .inputs {
         display: flex;
         justify-content: space-between;
+        align-content: center;
+
+
+        input {
+          width: 100%;
+          border-radius: 10px;
+          background-color: $secondary-color;
+          color: $text-color;
+          font-size: 20px;
+          border: 1px solid $base-color;
+          padding: 10px;
+          box-shadow: 0 0 3px $base-color;
+          margin:0 10px;
+
+
+          @media screen and (max-width: 1200px) {
+            width: 80%;
+            margin: 10px auto;
+          }
+
+          &:active, &:focus {
+            outline: none;
+            border: 1px solid $base-color;
+
+          }
+
+          &::placeholder {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.58);
+
+          }
+        }
+
         @media screen and (max-width: 1200px) {
           display: flex;
           flex-direction: column;
@@ -125,7 +159,8 @@
           color: $text-color;
           font-size: 20px;
           border: 1px solid $base-color;
-          box-shadow: 0 0 7px $base-color;
+          box-shadow: 0 0 3px $base-color;
+
 
           @media screen and (max-width: 1200px) {
             width: 80%;

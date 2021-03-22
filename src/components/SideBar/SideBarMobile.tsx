@@ -9,10 +9,13 @@ type PropsType = {
 }
 
 const SideBarMobile = ({open, setOpen}: PropsType) => {
+
+
+
     const toggleMenuHandler = () => {
         setOpen(!open)
     }
-    console.log(open)
+
     return (
         <div className={style.sidebarMobile}>
             <a className={open ? `${style.hamburgerMenu} ${style.flex} ${style.active}` : `${style.hamburgerMenu} ${style.flex}`}

@@ -25,8 +25,7 @@ const SideBar = (props: any) => {
         id: number
         title: string
         link: string
-        src: any
-
+        src: string
     }
     const buttons: Array<ButtonType> = [
         {id: 1, title: 'Home', link: '/home', src: home},
@@ -42,9 +41,8 @@ const SideBar = (props: any) => {
                 const isToggled = button.id === toggledButtonId;
                 const isActiveItem = isToggled ? style.activeItem + ' ' + style.item : style.item
                 return (
-                    <NavLink style={{textDecoration: 'none'}} to={button.link}>
+                    <NavLink key={button.id} style={{textDecoration: 'none'}} to={button.link}>
                         <div
-                            key={button.id}
                             onClick={() => onActiveHandle(button)}
                             className={isActiveItem}>
                             <h2 className={style.buttonTitle}>{button.title}</h2>
