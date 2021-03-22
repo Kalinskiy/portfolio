@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.15935bf7.chunk.css",
-    "main.js": "/portfolio/static/js/main.3fd131f7.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.3fd131f7.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.68e9cc18.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.68e9cc18.js.map",
-    "static/js/2.1501efb1.chunk.js": "/portfolio/static/js/2.1501efb1.chunk.js",
-    "static/js/2.1501efb1.chunk.js.map": "/portfolio/static/js/2.1501efb1.chunk.js.map",
-    "static/js/3.afbdc4ad.chunk.js": "/portfolio/static/js/3.afbdc4ad.chunk.js",
-    "static/js/3.afbdc4ad.chunk.js.map": "/portfolio/static/js/3.afbdc4ad.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.afc96d4e.chunk.css",
+    "main.js": "/portfolio/static/js/main.3b6f6532.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.3b6f6532.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.f072938f.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f072938f.js.map",
+    "static/js/2.1e5f4505.chunk.js": "/portfolio/static/js/2.1e5f4505.chunk.js",
+    "static/js/2.1e5f4505.chunk.js.map": "/portfolio/static/js/2.1e5f4505.chunk.js.map",
+    "static/js/3.cc3e0e19.chunk.js": "/portfolio/static/js/3.cc3e0e19.chunk.js",
+    "static/js/3.cc3e0e19.chunk.js.map": "/portfolio/static/js/3.cc3e0e19.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.15935bf7.chunk.css.map": "/portfolio/static/css/main.15935bf7.chunk.css.map",
-    "static/js/2.1501efb1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1501efb1.chunk.js.LICENSE.txt",
+    "static/css/main.afc96d4e.chunk.css.map": "/portfolio/static/css/main.afc96d4e.chunk.css.map",
+    "static/js/2.1e5f4505.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1e5f4505.chunk.js.LICENSE.txt",
     "static/media/books.d80bff94.jpg": "/portfolio/static/media/books.d80bff94.jpg",
     "static/media/cards.42f7eaa1.jpg": "/portfolio/static/media/cards.42f7eaa1.jpg",
     "static/media/cinema.3c983528.jpg": "/portfolio/static/media/cinema.3c983528.jpg",
@@ -21,9 +21,9 @@
     "static/media/todo.b4004167.png": "/portfolio/static/media/todo.b4004167.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.68e9cc18.js",
-    "static/js/2.1501efb1.chunk.js",
-    "static/css/main.15935bf7.chunk.css",
-    "static/js/main.3fd131f7.chunk.js"
+    "static/js/runtime-main.f072938f.js",
+    "static/js/2.1e5f4505.chunk.js",
+    "static/css/main.afc96d4e.chunk.css",
+    "static/js/main.3b6f6532.chunk.js"
   ]
 }
