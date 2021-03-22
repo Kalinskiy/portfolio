@@ -11,6 +11,7 @@ import SideBar from "../SideBar/SideBar";
 
 
 const App = () => {
+    console.log('test')
     const [preloader, setPreloader] = useState(false)
     const [open, setOpen] = useState(false)
 
