@@ -9,6 +9,7 @@ import github from '../../assets/icons/github.png'
 import Title from "../../common/components/Title/Title";
 import Button from "../../common/components/Button/Button";
 import {useFormik} from "formik";
+import axios from 'axios'
 
 const Contacts = () => {
 
@@ -21,7 +22,10 @@ const Contacts = () => {
             message: ''
         },
         onSubmit: values => {
-            console.log(values)
+        axios.post('https://nodejs-mailer.herokuapp.com/sendMessage', values)
+            .then(()=>{
+                alert('your message has been sent')
+            })
         }
     })
 
