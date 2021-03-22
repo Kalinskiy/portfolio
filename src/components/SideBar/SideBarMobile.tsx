@@ -14,7 +14,7 @@ const SideBarMobile = ({open, setOpen}: PropsType) => {
     }
     console.log(open)
     return (
-        <>
+        <div className={style.sidebarMobile}>
             <a className={open ? `${style.hamburgerMenu} ${style.flex} ${style.active}` : `${style.hamburgerMenu} ${style.flex}`}
                onClick={toggleMenuHandler}
             >
@@ -30,7 +30,7 @@ const SideBarMobile = ({open, setOpen}: PropsType) => {
                     <li onClick={() => setOpen(false)}><NavLink to="/contacts">Contacts</NavLink></li>
                 </ul>
             </div>
-        </>
+        </div>
     );
 };
 
