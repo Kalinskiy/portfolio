@@ -11,9 +11,6 @@ import SideBar from "../SideBar/SideBar";
 
 
 const App = () => {
-
-
-
     const [preloader, setPreloader] = useState(false)
     const [open, setOpen] = useState(false)
 

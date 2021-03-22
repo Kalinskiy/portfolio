@@ -5,6 +5,7 @@
   top: 30%;
   left: 95%;
   z-index: 100;
+  box-sizing: border-box;
   @media screen and (min-width: 993px) {
     opacity: 1;
   }
@@ -12,17 +13,17 @@
 
   .item {
     display: flex;
-    width: 29px;
-    height: 29px;
+    width: 49px;
+    height: 49px;
     border-radius: 50%;
     background-color: $secondary-color;
-    padding: 10px;
     align-items: center;
     justify-content: center;
     margin: 20px 0;
     cursor: pointer;
     position: relative;
     text-decoration: none;
+    box-sizing: border-box;
 
     &:hover {
       background-color: $base-color;
@@ -40,7 +41,7 @@
       z-index: -1;
       transition: all .3s;
       overflow: hidden;
-      box-shadow: 0 0 7px $base-color;
+      //box-shadow: 0 0 7px $base-color;
 
     }
 
@@ -60,6 +61,9 @@
   .activeItem {
     border: 1px solid $base-color;
     box-shadow: 0 0 7px $base-color;
-
+  }
+  .activeItem:hover {
+    box-shadow: none;
+    border:none;
   }
 }
